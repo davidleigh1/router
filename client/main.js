@@ -90,32 +90,32 @@ Template.slideNavMenu.helpers({
 				url : "/products/8888/Jack Kits",
 				label : "Jack Kits [8888]"
 			},
-			{
-				url : "/pages/one",
-				label : "pages > one"
-			},
-			{
-				url : "/pages/two",
-				label : "pages > two"
-			},
-			{
-				url : "/documents",
-				label : "Docs List"
-			},
-			{
-				url : "/documents/123",
-				label : "Doc 123 (read)"
-			},
-			{
-				url : "/documents/123/edit",
-				label : "Doc 123 (edit)"
-			},
+			// {
+			// 	url : "/pages/one",
+			// 	label : "pages > one"
+			// },
+			// {
+			// 	url : "/pages/two",
+			// 	label : "pages > two"
+			// },
+			// {
+			// 	url : "/documents",
+			// 	label : "Docs List"
+			// },
+			// {
+			// 	url : "/documents/123",
+			// 	label : "Doc 123 (read)"
+			// },
+			// {
+			// 	url : "/documents/123/edit",
+			// 	label : "Doc 123 (edit)"
+			// },
 			{
 				url : "/account/profile",
 				label : "Account Profile"
 			},
 			{
-				url : "/terms",
+				url : "/account/terms",
 				label : "Terms of Service"
 			}
 		];
