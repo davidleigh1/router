@@ -1,0 +1,217 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>flow-router test app</title>
+</head>
+
+
+<body>
+	<!-- <div id="header">
+		<h1>Welcome to Meteor!</h1>
+	</div>
+	<div id="navDrawer" class="navDrawer">
+		
+	</div>
+	<div id="navToggle" class="navToggle">
+		X
+	</div> -->
+
+	<!-- {{> hello}} -->
+	<!-- {{> routeDetails}} -->
+	
+	<!-- {{> applicationLayout}} -->
+
+
+
+	<!-- <div id="site-wrapper"> -->
+
+		<!-- <div id="site-canvas"> -->
+
+<!-- 			<div id="site-menu">
+				{{> menu}}
+			</div> -->
+
+
+		<!-- <a href="#" class="toggle-nav btn btn-lg btn-success" id="big-sexy"><i class="fa fa-bars"></i></a> -->
+		<!-- <h1 class="text-center">Off Canvas Menu Tutorial</h1> -->
+
+		<!-- #site-canvas -->
+		<!-- </div> -->
+
+	<!-- #site-wrapper> -->
+	<!-- </div> -->
+
+<!-- Scripts
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+-->
+
+</body>
+
+
+
+
+<!-- https://kadira.io/academy/meteor-routing-guide/content/rendering-blaze-templates -->
+
+<template name="mainLayout">
+	<div id="wrapper">
+		{{> navToggle}}
+		{{> content}}
+		<div class="slide-menu">
+			{{> slideNavMenu}}
+		</div>
+  	<!-- / #wrapper -->
+	</div>
+</template>
+
+
+<template name="content">
+	<div class="content">
+		<header>
+			<h1 class="text-center">BlazeLayout + Router Demo App</h1>
+		</header>
+		<main>
+			{{>Template.dynamic template=mainContent}}
+		</main>
+		<footer>
+			We love Meteor
+		</footer>
+	<!-- /.content -->
+	</div>
+</template>
+
+
+
+<template name="navToggle">
+	<input id="toggleSlideMenu" type="checkbox"><label for="toggleSlideMenu"></label>
+	<!-- <a href="#" class="toggle-nav btn btn-lg btn-success" id="big-sexy"><i class="fa fa-bars"></i></a> -->
+</template>
+
+<template name="blogHome">
+	<h2>HOME PAGE</h2>
+	<p>This is the home page of our blog</p>
+	<p>
+		<a href="/hello-world">See Hello World Post</a>
+	</p>
+</template>
+
+
+<template name="blogPost">
+	<p>
+		<h2>Hello world!</h2>
+		<p>This is a single blog post</p>
+		<a href="/">Back</a>
+	</p>
+</template>
+
+
+
+<!-- BlazeLayout Tutorial -->
+<!-- https://github.com/kadirahq/blaze-layout -->
+
+<!--
+
+<template name="layout1">
+  {{> Template.dynamic template=top}}
+  {{> Template.dynamic template=main}}
+</template>
+
+<template name="header">
+  <h1>This is the header</h1>
+</template>
+
+<template name="postList">
+  <h2>This is the postList area.</h2>
+</template>
+
+<template name="singlePost">
+  <h2>This is the singlePost area.</h2>
+</template>
+
+ -->
+
+<!-- /BlazeLayout Tutorial -->
+
+<template name="termsOfService">
+	<p>This is *termsOfService*</p>
+</template>
+
+<template name="productList">
+	<p>This is *productList* template - we're viewing a list of products.</p>
+	<p><a href="/products/4417/Car-Shades">Car Shades [4417]</a></p>
+	<p><a href="/products/8203/SUV-lights">SUV Lights [8203]</a></p>
+	<p><a href="/products/7777/Snow Tyres">Snow Tyres [7777]</a></p>
+	<p><a href="/products/8888/Jack Kits">Jack Kits [8888]"</a></p>
+</template>
+
+<template name="productPage">
+	<p>This is *productPage* template - we're should have a new layout for all the product details</p>
+	<div>
+		<table style="width: 100%; border-color: blue; float: left; background-color: white;" border="1">
+		<tbody>
+		<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		</tr>
+		<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		</tr>
+		<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		</tr>
+		</tbody>
+		</table>
+		<!-- DivTable.com -->
+	</div>
+</template>
+
+
+<!--
+
+<template name="applicationLayout">
+	<p>
+	header:	{{> Template.dynamic template=header}}<br />
+	sidebar:	{{> Template.dynamic template=sidebar}}<br />
+	main:	{{> Template.dynamic template=main}}<br />
+	footer:	{{> Template.dynamic template=footer}}<br />
+	</p>
+</template>
+
+
+ -->
+
+<template name="App_notFound">
+	404 APP NOT FOUND
+</template>
+
+
+<template name="navEntry">
+	<a href="{{url}}">{{text}}</a>
+</template>
+
+
+<template name="slideNavMenu">
+	{{> menuHeader}}
+	<nav class="menu">
+
+		{{#each navItem in navList}}
+			<li>
+				{{> navEntry text=navItem.label target=navItem.target url=navItem.url }}
+			</li>
+		{{/each}}
+
+	</nav>
+</template>
+
+<template name="menuHeader">
+	<div class="menuHeader">User | Settings</div>
+</template>
+
+
+
