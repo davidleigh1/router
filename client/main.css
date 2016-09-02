@@ -70,11 +70,6 @@ input#toggleSlideMenu[type=checkbox]:checked ~ label {
     margin: 0 auto;
     height: 100vh;  /* 100vh = 'view height' so full height rather than 100% */
 }
-
-.accountContent {
-	background-color: green;
-}
-
 input#toggleSlideMenu[type=checkbox]:checked ~ .content {
    /*transform: translate3d(250px, 0, 0);*/
    transform: translate3d(-250px, 0, 0); /* From right */

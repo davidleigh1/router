@@ -130,42 +130,8 @@
 
 <!-- /BlazeLayout Tutorial -->
 
-
-<template name="accountLayout">
-	<div id="wrapper">
-		{{> navToggle}}
-		{{> accountContent}}
-		<div class="slide-menu">
-			{{> slideNavMenu}}
-		</div>
-  	<!-- / #wrapper -->
-	</div>
-</template>
-
-
-<template name="accountContent">
-	<div class="content accountContent">
-		<main>
-			<h3 class="text-center">Account Section Layout</h3>
-			<p>No header or footer!</p>
-			<p>But the 'mainContent' content still loads in the same way below!</p>
-			{{>Template.dynamic template=mainContent}}
-		</main>
-	<!-- /.content -->
-	</div>
-</template>
-
-
-
-
-
-
 <template name="termsOfService">
 	<p>This is *termsOfService*</p>
-</template>
-
-<template name="accountProfile">
-	<p>This is *accountProfile*</p>
 </template>
 
 <template name="productList">
